@@ -62,7 +62,7 @@ pipeline {
 
           steps {
             withSonarQubeEnv('sonarserver') {
-               sh 'mvn clean package sonar:sonar' 
+               sh 'mvn clean package sonar:sonar -Dsonar.projectKey=vprofile-pactise -Dsonar.projectName=vprofile-pactise -Dsonar.projectVersion=1.0' 
             }
             
             /* 
